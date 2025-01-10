@@ -17,6 +17,7 @@ This platform is designed to provide an accessible environment for specially-abl
 ### Image to Text
 - Converts images to descriptive text using the BLIP Model.
 - Uses Gradio to create a user-friendly interface for real-time captioning.
+![Image Processing](https://github.com/Meghana-K06/Philomaths-codered25/blob/main/WOMAN%20HOLDING%20A%20BOTTLE.jpg)
 
 ### Gesture Control
 - **Hand Gesture Recognition** using MediaPipe and OpenCV.
