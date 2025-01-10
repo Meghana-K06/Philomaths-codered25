@@ -2,7 +2,7 @@
 
 ## Overview
 
-This platform is designed to provide an accessible environment for specially-abled students. It includes various features like Image Captioning, Gesture-Controlled Navigation, Speech-to-Text, and Sign Language Recognition. The platform is equipped with speech synthesis for interaction and hand gesture detection for enhanced usability.
+This platform is designed to provide an accessible assessment environment for specially-abled students. Its unique its its eay access and integrated features for blind, deaf or dumb enthusiastic learners. Includes various features like Image Captioning, Gesture-Controlled Navigation, Speech-to-Text, and Sign Language Recognition. The platform is equipped with speech synthesis for interaction and hand gesture detection for enhanced usability. This makes it easy for the students, teachers and their interaction
 
 ## Features
 
