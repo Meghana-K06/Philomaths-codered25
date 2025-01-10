@@ -2,6 +2,7 @@ import pytesseract
 from pytesseract import Output
 import PIL.Image
 import cv2
+import pyttsx3
 
 """
 Page segmentation modes: 
@@ -48,7 +49,6 @@ myconfig = r"--psm 11 --oem 3"
 img = cv2.imread("test3.jpg")
 height, width, _  = img.shape
 
-
 #-------------------------------------------------------------------
 # boxes = pytesseract.image_to_boxes(img, config=myconfig)      # To box every charecter
 # print(boxes)
@@ -74,6 +74,30 @@ for i in range(amount_boxes):
 
 with open("extracted_text.txt", "w") as file:
     file.write(extracted_text)
+
+
+
+def read_text_file_aloud(file_path):
+    try:
+        # Initialize the text-to-speech engine
+        engine = pyttsx3.init()
+        
+        # Open the text file
+        with open(file_path, "r", encoding="utf-8") as file:
+            content = file.read()
+        
+        # Speak the content
+        engine.say(content)
+        engine.runAndWait()
+    except FileNotFoundError:
+        print("Error: The specified file was not found.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+# Specify the path to your text file
+file_path = "extracted_text.txt"  # Replace with your file path
+
+read_text_file_aloud(file_path)
 
 cv2.imshow("img",img)
 cv2.waitKey(0)
