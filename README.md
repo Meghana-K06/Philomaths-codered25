@@ -28,7 +28,7 @@ This platform is designed to provide an accessible assessment environment for sp
 - **Hand Gesture Recognition** using MediaPipe and OpenCV.
   - Simulates a virtual mouse with hand gestures: index finger for movement and thumb for clicking.
   - Movements are translated to screen coordinates, and clicking is triggered by the distance between the index and thumb fingers.
-![Key pointing Modeling](C:\Users\megha\OneDrive\Desktop\code red\hand.jpg)
+![Key pointing Modeling](https://github.com/Meghana-K06/Philomaths-codered25/blob/main/hand.jpg))
 
 ### Accessibility Features
 - Voice-based instructions and controls.
@@ -61,7 +61,7 @@ This platform is designed to provide an accessible assessment environment for sp
 ### Sign Language 
 - Converts sign language into alphabets and text
 - Easy for deaf and dumb student teacher interaction
-![Sign Lang](C:\Users\megha\OneDrive\Desktop\code red\sign.jpg)
+![Sign Lang](https://github.com/Meghana-K06/Philomaths-codered25/blob/main/sign.jpg))
 
 ### Gesture Control
 - The system uses MediaPipe to detect hand positions (index and thumb fingers).
@@ -69,7 +69,7 @@ This platform is designed to provide an accessible assessment environment for sp
 
 ## Instructions
 
-![WEBSITE](C:\Users\megha\OneDrive\Desktop\code red\website.jpg)
+![WEBSITE](https://github.com/Meghana-K06/Philomaths-codered25/blob/main/website.jpg)
 
 ### Sign Up/Login Process
 1. Press 1: Login by entering your Student ID.
@@ -93,3 +93,4 @@ This platform is designed to provide an accessible assessment environment for sp
 ### Install Dependencies
 ```bash
 pip install opencv-python mediapipe pyautogui gradio flask transformers
+
