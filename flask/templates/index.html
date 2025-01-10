@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering Abilities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f7ff;
+            color: #333;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        header a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        .container {
+            padding: 30px;
+        }
+        h1 {
+            color: #3333cc;
+        }
+        .highlight {
+            color: #33cc99;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .text-section {
+            flex: 1;
+            min-width: 300px;
+        }
+        .image-section {
+            flex: 1;
+            min-width: 300px;
+        }
+        .image-section img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+        .contact-section {
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #ccf2ff;
+            border-radius: 8px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #ffffff;
+        }
+        footer a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .pretty-button {
+            background-color:rgb(68, 55, 183); /* Green background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 12px 24px; /* Padding inside the button */
+            text-align: center; /* Center text */
+            text-decoration: none; /* Remove underline */
+            display: inline-block; /* Inline-block element */
+            font-size: 16px; /* Font size */
+            font-weight: bold; /* Bold font */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+            transition: background-color 0.3s, transform 0.2s; /* Smooth effects */
+        }
+
+        .pretty-button:hover {
+            background-color:rgb(69, 127, 160); /* Darker green on hover */
+            transform: translateY(-2px); /* Slight lift effect on hover */
+        }
+
+        .pretty-button:active {
+            background-color:rgb(60, 55, 207); /* Even darker green on click */
+            transform: translateY(0); /* Reset lift effect */
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Empowering Abilities</h2>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Create Account</a>
+            <a href="#">Log in</a>
+            <a href="#">Donate</a>
+            <a href="#">Language</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <div class="text-section">
+                <h1>Empowering <span class="highlight">Abilities</span>,<br> Redefining Tests.</h1>
+                <p>We are here to make technology accessible and empowering for everyone. Our platform is designed with you in mind, offering tools that adapt to your unique needs. Whether you prefer voice commands, gestures, or other assistive technologies, our features ensure you can interact seamlessly and independently.</p>
+                <p>From personalized settings to accessible assessments tailored just for you, our goal is to provide a smooth and inclusive experience. Explore our platform and discover how we make technology work for you—<strong>your way</strong>.</p>
+            </div>
+            <div class="image-section">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgIBfy1ITEhenS8sp2OOyCXvmxqDkCiKjwwDygzYxNJG3i9t93MS54LxIsvgIA_R5fMt8pgQ3EsrbMiYivOz_FWUpv7RY3xTaC4x6HYiazwM4_nr3Pa7tEBxUK4tnnWE-bpW_6MI7-4gCYk/s1600/img031.jpg" alt="Image preview">
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <button class="pretty-button" onclick="goToLogin()">Click Me</button>
+            <h2>Contact Us</h2>
+            
+            <p><strong>Call us:</strong><br>+91 88874444221<br>+91 45532230987</p>
+            <p><strong>Email:</strong><br><a href="mailto:allabilitiescode@gmail.com">allabilitiescode@gmail.com</a></p>
+            <p><strong>Socials:</strong></p>
+            <p>
+                <a href="#">Twitter</a> |
+                <a href="#">Instagram</a> |
+                <a href="#">Facebook</a>
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <a href="#">Create Account</a>
+        <a href="#">Log in</a>
+        <a href="#">Donate</a>
+        <a href="#">Language</a>
+    </footer>
+
+    <script>
+        // Redirect to login page when the button is clicked
+        function goToLogin() {
+            window.location.href = '/about';
+        }
+
+        // Redirect to login page on any key press
+        document.addEventListener('keydown', function () {
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            background-color: #cce7ff;
+            padding: 20px;
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+        }
+
+        .sidebar h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .sidebar a {
+            display: block;
+            margin: 15px 0;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .sidebar a.active {
+            background-color: #3333cc;
+            color: white;
+        }
+
+        /* Main Content Styles */
+        .main {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        .header {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Add hover effects */
+        .sidebar a:hover {
+            background-color: #5555ff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Welcome! XYZ</h2>
+        <a href="#" class="active">DASHBOARD</a>
+        <a href="#">ACCESSIBILITY FEATURES</a>
+        <a href="#">PROGRESS TRACKER</a>
+        <a href="#" onclick="showImageToText()">IMAGE TO TEXT</a>
+        <a href="#" onclick="showSignLanguage()">SIGN LANGUAGE</a>
+        <a href="#">SETTINGS</a>
+        <a href="#">ADD ANOTHER ACCOUNT</a>
+        <a href="#">LOGOUT</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <div id="default-content">
+            <div class="header">Dashboard Instructions</div>
+            <p>Please enter 1 for Image to Text or 2 for Sign Language:</p>
+            <input type="number" id="user-input" placeholder="Enter your choice">
+            <button onclick="processInput()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        // Speak instructions when the page loads
+        function speakInstructions() {
+            const message = "Welcome to the dashboard. Please enter 1 for Image to Text or 2 for Sign Language.";
+            const utterance = new SpeechSynthesisUtterance(message);
+            utterance.rate = 1; // Adjust speed
+            utterance.pitch = 1; // Adjust pitch
+            speechSynthesis.speak(utterance);
+        }
+
+        // Speak a message aloud
+        function speakMessage(message) {
+            const utterance = new SpeechSynthesisUtterance(message);
+            utterance.rate = 1; // Adjust speed
+            utterance.pitch = 1; // Adjust pitch
+            speechSynthesis.speak(utterance);
+        }
+
+        // Process user input
+        function processInput() {
+            const userInput = document.getElementById('user-input').value;
+            if (userInput === '1') {
+                const message = "You have chosen Image to Text. Redirecting now.";
+                speakMessage(message);
+                setTimeout(() => {
+                    window.location.href = "http://127.0.0.1:7860";
+                }, 3000); // Wait for the message to finish before redirecting
+            } else if (userInput === '2') {
+                const message = "You have chosen Sign Language. Redirecting now.";
+                speakMessage(message);
+                setTimeout(() => {
+                    alert("Redirecting to Sign Language resources.");
+                    // Replace with actual redirection
+                    // window.location.href = "sign-language.html";
+                }, 3000);
+            } else {
+                const message = "Invalid choice. Please enter 1 or 2.";
+                speakMessage(message);
+                alert(message);
+            }
+        }
+
+        // Call the speakInstructions function when the page loads
+        window.onload = speakInstructions;
+    </script>
+</body>
+</html>

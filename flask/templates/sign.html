@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    .hidden {
+      display: none;
+    }
+    input {
+      margin: 10px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Assessment Platform</h1>
+  <p>This platform helps specially-abled students take assessments with ease.</p>
+  <p id="prompt">Press 1 to Login or Press 2 to Sign Up.</p>
+
+  <div id="login-section" class="hidden">
+    <h2>Login</h2>
+    <label for="student-id-login">Enter your Student ID:</label><br>
+    <input type="text" id="student-id-login" placeholder="Student ID"><br>
+    <button onclick="submitLogin()">Submit</button>
+  </div>
+
+  <div id="signup-section" class="hidden">
+    <h2>Sign Up</h2>
+    <label for="student-name">Enter your Name:</label><br>
+    <input type="text" id="student-name" placeholder="Student Name"><br>
+    <label for="student-id-signup">Enter your Student ID:</label><br>
+    <input type="text" id="student-id-signup" placeholder="Student ID"><br>
+    <button onclick="submitSignup()">Submit</button>
+  </div>
+
+  <script>
+    // Function to initialize Text-to-Speech
+    function speakText(text) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "en-US";
+      speechSynthesis.speak(utterance);
+    }
+
+    // Initial prompt
+    window.onload = function() {
+      speakText("Welcome to the Assessment Platform. Press 1 to Login or Press 2 to Sign Up.");
+    };
+
+    // Handle key presses for navigation
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "1") {
+        document.getElementById("login-section").classList.remove("hidden");
+        document.getElementById("signup-section").classList.add("hidden");
+        speakText("Login section opened. Please enter your Student ID.");
+      } else if (event.key === "2") {
+        document.getElementById("signup-section").classList.remove("hidden");
+        document.getElementById("login-section").classList.add("hidden");
+        speakText("Sign-up section opened. Please enter your Name and Student ID.");
+      }
+    });
+
+    // Submit Login
+    function submitLogin() {
+      const studentId = document.getElementById("student-id-login").value;
+      if (studentId) {
+        const message =` Login successful. Welcome, Student ID: ${studentId}. Redirecting to dashboard.`;
+        alert(message);
+        speakText(message);
+        window.location.href = "/dashboard"; // Redirect to dashboard
+      } else {
+        const error = "Please enter your Student ID.";
+        alert(error);
+        speakText(error);
+      }
+    }
+
+    // Submit Signup
+    function submitSignup() {
+      const studentName = document.getElementById("student-name").value;
+      const studentId = document.getElementById("student-id-signup").value;
+      if (studentName && studentId) {
+        const message = `Sign-up successful. Welcome, ${studentName}, ID: ${studentId}. Redirecting to dashboard.`;
+        alert(message);
+        speakText(message);
+        window.location.href = "/dashboard"; // Redirect to dashboard
+      } else {
+        const error = "Please enter both your Name and Student ID.";
+        alert(error);
+        speakText(error);
+      }
+    }
+  </script>
+</body>
+</html>
