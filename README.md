@@ -2,7 +2,7 @@
 
 ## Overview
 
-This platform is designed to provide an accessible environment for specially-abled students. It includes various features like Image Captioning, Gesture-Controlled Navigation, Speech-to-Text, and Sign Language Recognition. The platform is equipped with speech synthesis for interaction and hand gesture detection for enhanced usability.
+This platform is designed to provide an accessible assessment environment for specially-abled students. Its unique its its eay access and integrated features for blind, deaf or dumb enthusiastic learners. Includes various features like Image Captioning, Gesture-Controlled Navigation, Speech-to-Text, and Sign Language Recognition. The platform is equipped with speech synthesis for interaction and hand gesture detection for enhanced usability. This makes it easy for the students, teachers and their interaction
 
 ## Features
 
@@ -28,7 +28,7 @@ This platform is designed to provide an accessible environment for specially-abl
 - **Hand Gesture Recognition** using MediaPipe and OpenCV.
   - Simulates a virtual mouse with hand gestures: index finger for movement and thumb for clicking.
   - Movements are translated to screen coordinates, and clicking is triggered by the distance between the index and thumb fingers.
-![Key pointing Modeling](C:\Users\megha\OneDrive\Desktop\code red\hand.jpg)
+![Key pointing Modeling](https://github.com/Meghana-K06/Philomaths-codered25/blob/main/hand.jpg))
 
 ### Accessibility Features
 - Voice-based instructions and controls.
@@ -61,7 +61,7 @@ This platform is designed to provide an accessible environment for specially-abl
 ### Sign Language 
 - Converts sign language into alphabets and text
 - Easy for deaf and dumb student teacher interaction
-![Sign Lang](C:\Users\megha\OneDrive\Desktop\code red\sign.jpg)
+![Sign Lang](https://github.com/Meghana-K06/Philomaths-codered25/blob/main/sign.jpg))
 
 ### Gesture Control
 - The system uses MediaPipe to detect hand positions (index and thumb fingers).
@@ -69,7 +69,7 @@ This platform is designed to provide an accessible environment for specially-abl
 
 ## Instructions
 
-![WEBSITE](C:\Users\megha\OneDrive\Desktop\code red\website.jpg)
+![WEBSITE](https://github.com/Meghana-K06/Philomaths-codered25/blob/main/website.jpg)
 
 ### Sign Up/Login Process
 1. Press 1: Login by entering your Student ID.
@@ -93,3 +93,4 @@ This platform is designed to provide an accessible environment for specially-abl
 ### Install Dependencies
 ```bash
 pip install opencv-python mediapipe pyautogui gradio flask transformers
+
